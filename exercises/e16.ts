@@ -5,10 +5,9 @@ export function find<T>(
   array: T[],
   callback: (arg: T) => boolean
 ): T | undefined {
-  for (let i = 0; i < array.length; i++) {
-    if (callback(array[i])) {
-      return array[i];
+  for (let element of array) {
+    if (callback(element)) {
+      return element;
     }
   }
-  return undefined;
 }
