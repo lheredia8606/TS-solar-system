@@ -10,7 +10,9 @@ export function getAsteroidDataByName({
 }: {
   allData: TData;
   asteroidName: string;
-}) {}
+}) {
+  return allData.asteroids.find((asteroid) => (asteroid.name = asteroidName));
+}
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-10"
