@@ -1,7 +1,14 @@
 // SPACE DATA EXERCISE 12
 // Return the sum of all moons for all planets
+
+import { TData } from "../data/types";
+
 // Return example: 42
-export const allPlanetsMoonsCount = (data) => {};
+export const allPlanetsMoonsCount = (data: TData) => {
+  return data.planets.reduce((totalMoons, planet) => {
+    return planet.moonsCount ? totalMoons + planet.moonsCount : totalMoons;
+  }, 0);
+};
 
 // === TEST YOURSELF ===
 // Once you're finished run the test with "npm run test-12"

@@ -1,4 +1,6 @@
-export const data = {
+import { TData } from "./types";
+
+export const data: TData = {
   planets: [
     {
       id: "uranus",
